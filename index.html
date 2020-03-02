@@ -7,12 +7,12 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="player-container">
+    <div class="player-container" id="player-container">
         <div class="img-container" id="img-container">
-            <img src="img/jacinto-1.jpg" alt="Album Art">
+            <img src="img/jacinto-1.jpg" alt="Album Art" id="image">
         </div>
         <h2 id="title">Unknown</h2>
-        <h3 id="sub-title">Flaming Js</h3>
+        <h3 id="artist">Flaming Js</h3>
         <audio src="music/jacinto-1.mp3" id="music"></audio>
         <div class="progress-container" id="progress-container">
             <div class="progress" id="progress"></div>
@@ -20,7 +20,7 @@
         <div class="player-controls">
             <i class="fas fa-backward" id="prev" title="Previous"></i>
             <span id="play">
-                <i class="fas fa-play" title="Play"></i>
+                <i class="fas fa-play main-button" title="Play"></i>
             </span>
             <i class="fas fa-forward" id="next" title="Next"></i>
         </div>

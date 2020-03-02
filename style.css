@@ -41,6 +41,7 @@ h2 {
     font-size: 2.5rem;
     text-align: center;
     margin: 0;
+    text-transform: capitalize;
 }
 
 h3 {
@@ -48,6 +49,7 @@ h3 {
     text-align: center;
     font-weight: 400;
     margin: 0;
+    text-transform: capitalize;
 }
 
 .progress-container {
@@ -70,7 +72,7 @@ h3 {
 .player-controls {
     position: relative;
     top: -1rem;
-    left: 31%;
+    left: 30%;
 }
 
 .fas {
@@ -78,13 +80,14 @@ h3 {
     color: rgb(129, 129, 129);
     margin-right: 3rem;
     cursor: pointer;
+    user-select: none;
 }
 
 .fas:hover {
     filter: brightness(80%);
 }
 
-.fa-play {
+.main-button {
     font-size: 4rem;
     position: relative;
     top: .3rem;
