@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css?family=Spartan:400,700&display=swap');
+
+* { box-sizing: border-box; }
+
+html { font-size: 62.5% }
+
+body {
+    margin: 0;
+    background: #c9ced3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Spartan, sans-serif;
+}
+
+.player-container {
+    height: 50rem;
+    width: 40rem;
+    border-radius: 2rem;
+    background-color: #e7e7e7;
+    box-shadow: 0 1.5rem 3rem .5rem rgba(0, 0, 0, .3);
+}
+
+.img-container {
+    width: 30rem;
+    height: 30rem;
+    position: relative;
+    top: -5rem;
+    left: 5rem;
+}
+
+.img-container img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 2rem;
+    box-shadow: 0 .5rem 3rem .5rem rgba(0, 0, 0, .5);
+}
+
+h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 0;
+}
+
+h3 {
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: 400;
+    margin: 0;
+}
+
+.progress-container {
+    background: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 4rem 2rem;
+    height: 4px;
+    width: 90%;
+}
+  
+.progress {
+    background-color: #242323;
+    border-radius: 5px;
+    height: 100%;
+    width: 50%;
+    transition: width 0.1s linear;
+}
+
+.player-controls {
+    position: relative;
+    top: -1rem;
+    left: 31%;
+}
+
+.fas {
+    font-size: 3rem;
+    color: rgb(129, 129, 129);
+    margin-right: 3rem;
+    cursor: pointer;
+}
+
+.fas:hover {
+    filter: brightness(80%);
+}
+
+.fa-play {
+    font-size: 4rem;
+    position: relative;
+    top: .3rem;
+}
