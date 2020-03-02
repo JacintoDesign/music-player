@@ -82,6 +82,7 @@ h3 {
     position: relative;
     top: -1.5rem;
     left: 12rem;
+    width: 20rem;
 }
 
 .fas {
@@ -100,4 +101,13 @@ h3 {
     font-size: 4rem;
     position: relative;
     top: .3rem;
+}
+
+/* Media Query: iPhone (Vertical) */
+@media screen and (max-width: 376px) {
+    .player-container { width: 100%; margin: .5rem; }
+    .img-container { left: 3.25rem; }
+    h2 { font-size: 2rem; }
+    h3 { font-size: 1.5rem; }
+    .player-controls { top: -1rem; left: 10rem; }
 }
