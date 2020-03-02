@@ -41,15 +41,13 @@ h2 {
     font-size: 2.5rem;
     text-align: center;
     margin: 0;
-    text-transform: capitalize;
 }
 
 h3 {
-    font-size: 1.5rem;
+    font-size: 2rem;
     text-align: center;
     font-weight: 400;
-    margin: 0;
-    text-transform: capitalize;
+    margin: .5rem 0 0;
 }
 
 .progress-container {
@@ -72,7 +70,7 @@ h3 {
 
 .player-controls {
     position: relative;
-    top: -1rem;
+    top: -1.5rem;
     left: 12rem;
 }
 

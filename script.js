@@ -1,31 +1,28 @@
 const playerContainer = document.getElementById('player-container');
-
 const image = document.getElementById('image');
 const title = document.getElementById('title');
 const artist = document.getElementById('artist');
-
 const music = document.getElementById('music');
 const progress = document.getElementById('progress');
 const progressContainer = document.getElementById('progress-container');
-
 const prevBtn = document.getElementById('prev');
 const playBtn = document.getElementById('play');
 const nextBtn = document.getElementById('next');
 
 let isPlaying = false;
 
-// Array of song objects
+// Music
 const songs = [
-    { "name":"jacinto-1", "displayName":"Electric Chill Machine", "artist":"Jacinto" },
-    { "name":"jacinto-2", "displayName":"Seven Nation Army (Remix)", "artist":"Jacinto" },
-    { "name":"jacinto-3", "displayName":"Goodnight, Disco Queen", "artist":"Jacinto" },
-    { "name":"metric-1", "displayName":"Front Row (Remix)", "artist":"Metric" }
+    { "name":"jacinto-1", "displayName":"Electric Chill Machine", "artist":"Jacinto Design" },
+    { "name":"jacinto-2", "displayName":"Seven Nation Army (Remix)", "artist":"Jacinto Design" },
+    { "name":"jacinto-3", "displayName":"Goodnight, Disco Queen", "artist":"Jacinto Design" },
+    { "name":"metric-1", "displayName":"Front Row (Remix)", "artist":"Metric/Jacinto Design" }
 ];
 
-// Selecting song from array
+// Selecting Song
 let songIndex = 0;
 
-// Load selected song
+// Load Selected Song
 loadSong(songs[songIndex]);
 
 // Update DOM
@@ -36,7 +33,7 @@ function loadSong(song) {
     image.src = `img/${song.name}.jpg`;
 }
 
-// Event Listener: playBtn to pause or play
+// Play or Pause Event Listener
 playBtn.addEventListener('click', () => {
     if(isPlaying) {
         pauseSong();
@@ -61,11 +58,8 @@ function pauseSong() {
     music.pause();
 }
 
-// Event Listeners: Progress Bar
-progressContainer.addEventListener('click', setProgressBar);
-music.addEventListener('timeupdate', updateProgressBar);
-
 // Set Progress Bar
+progressContainer.addEventListener('click', setProgressBar);
 function setProgressBar(e) {
     let width = this.clientWidth;
     // shows total width
@@ -76,9 +70,39 @@ function setProgressBar(e) {
 }
 
 // Update Progress Bar
+music.addEventListener('timeupdate', updateProgressBar);
 function updateProgressBar(e) {
     let { duration, currentTime } = e.srcElement;
     console.log(duration, currentTime);
     let progressPercent = (currentTime / duration) * 100;
     progress.style.width = `${progressPercent}%`;
 }
+
+// Previous Song
+prevBtn.addEventListener('click', prevSong);
+function prevSong() {
+    songIndex--;
+
+    if (songIndex < 0) {
+        songIndex = songs.length - 1;
+    }
+
+    loadSong(songs[songIndex]);
+    playSong();
+}
+
+// Next Song
+nextBtn.addEventListener('click', nextSong);
+function nextSong() {
+    songIndex++;
+
+    if (songIndex > songs.length - 1) {
+        songIndex = 0;
+    }
+
+    loadSong(songs[songIndex]);
+    playSong();
+}
+
+// Play next song when current finishes
+music.addEventListener('ended', nextSong);
