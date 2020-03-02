@@ -3,6 +3,8 @@ const image = document.getElementById('image');
 const title = document.getElementById('title');
 const artist = document.getElementById('artist');
 const music = document.getElementById('music');
+const currentTimeEl = document.getElementById('current-time');
+const durationEl = document.getElementById('duration');
 const progress = document.getElementById('progress');
 const progressContainer = document.getElementById('progress-container');
 const prevBtn = document.getElementById('prev');
@@ -63,19 +65,40 @@ progressContainer.addEventListener('click', setProgressBar);
 function setProgressBar(e) {
     let width = this.clientWidth;
     // shows total width
-    console.log(width);
+    // console.log(width);
     let clickX = e.offsetX;
     let duration = music.duration;
     music.currentTime = (clickX / width) * duration;
 }
 
-// Update Progress Bar
+// Update Progress Bar & Time
 music.addEventListener('timeupdate', updateProgressBar);
 function updateProgressBar(e) {
-    let { duration, currentTime } = e.srcElement;
-    console.log(duration, currentTime);
-    let progressPercent = (currentTime / duration) * 100;
-    progress.style.width = `${progressPercent}%`;
+    if (isPlaying) {
+        let { duration, currentTime } = e.srcElement;
+        //console.log(duration, currentTime);
+
+        // Calculate display for duration
+        let durationMinutes = Math.floor(duration / 60);
+        let durationSeconds = Math.floor(duration % 60);
+        if (durationSeconds < 10) {
+            durationSeconds = '0' + durationSeconds;
+        } 
+        // Delay switching duration Element to avoid NaN
+        if (durationSeconds) {
+            durationEl.innerText = `${durationMinutes}:${durationSeconds}`
+        }
+        // Calculate display for currentTime
+        let currentMinutes = Math.floor(currentTime / 60);
+        let currentSeconds = Math.floor(currentTime % 60);
+        if (currentSeconds < 10) {
+            currentSeconds = '0' + currentSeconds;
+        } 
+        currentTimeEl.innerText = `${currentMinutes}:${currentSeconds}`
+        // Update progress bar width
+        let progressPercent = (currentTime / duration) * 100;
+        progress.style.width = `${progressPercent}%`;
+    }
 }
 
 // Previous Song

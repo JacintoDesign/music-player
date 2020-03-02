@@ -11,6 +11,10 @@ body {
     justify-content: center;
     align-items: center;
     font-family: Spartan, sans-serif;
+    /* background: linear-gradient(to bottom, #236892, #0F0E0A, #89201A);
+    background: linear-gradient(to right, #060501, #C26230, #CBA274);
+    background: linear-gradient(to bottom left, #177E9F, #553D53, #903755);
+    background: linear-gradient(to bottom, #143E4E, #002439, #D8CB96); */
 }
 
 .player-container {
@@ -57,7 +61,6 @@ h3 {
     margin: 4rem 2rem;
     height: 4px;
     width: 90%;
-    z-index: 10;
 }
   
 .progress {
@@ -66,6 +69,13 @@ h3 {
     height: 100%;
     width: 0%;
     transition: width 0.1s linear;
+}
+
+.duration-wrapper {
+    position: relative;
+    top: -2.5rem;
+    display: flex;
+    justify-content: space-between;
 }
 
 .player-controls {
