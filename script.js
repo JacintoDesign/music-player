@@ -36,7 +36,7 @@ function loadSong(song) {
     image.src = `img/${song.name}.jpg`;
 }
 
-// Event Listener for playBtn to pause or play
+// Event Listener: playBtn to pause or play
 playBtn.addEventListener('click', () => {
     if(isPlaying) {
         pauseSong();
@@ -45,6 +45,7 @@ playBtn.addEventListener('click', () => {
     }
 });
 
+// Play 
 function playSong() {
     isPlaying = true;
     playBtn.querySelector('i.fas').classList.remove('fa-play');
@@ -52,9 +53,32 @@ function playSong() {
     music.play();
 }
 
+// Pause
 function pauseSong() {
     isPlaying = false;
     playBtn.querySelector('i.fas').classList.remove('fa-pause');
     playBtn.querySelector('i.fas').classList.add('fa-play');
     music.pause();
+}
+
+// Event Listeners: Progress Bar
+progressContainer.addEventListener('click', setProgressBar);
+music.addEventListener('timeupdate', updateProgressBar);
+
+// Set Progress Bar
+function setProgressBar(e) {
+    let width = this.clientWidth;
+    // shows total width
+    console.log(width);
+    let clickX = e.offsetX;
+    let duration = music.duration;
+    music.currentTime = (clickX / width) * duration;
+}
+
+// Update Progress Bar
+function updateProgressBar(e) {
+    let { duration, currentTime } = e.srcElement;
+    console.log(duration, currentTime);
+    let progressPercent = (currentTime / duration) * 100;
+    progress.style.width = `${progressPercent}%`;
 }

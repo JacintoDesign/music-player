@@ -59,20 +59,21 @@ h3 {
     margin: 4rem 2rem;
     height: 4px;
     width: 90%;
+    z-index: 10;
 }
   
 .progress {
     background-color: #242323;
     border-radius: 5px;
     height: 100%;
-    width: 50%;
+    width: 0%;
     transition: width 0.1s linear;
 }
 
 .player-controls {
     position: relative;
     top: -1rem;
-    left: 30%;
+    left: 12rem;
 }
 
 .fas {
