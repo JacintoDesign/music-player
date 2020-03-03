@@ -1,6 +1,6 @@
 const playerContainer = document.getElementById('player-container');
 const image = document.getElementById('image');
-const title = document.getElementById('title');
+const track = document.getElementById('track');
 const artist = document.getElementById('artist');
 const music = document.getElementById('music');
 const currentTimeEl = document.getElementById('current-time');
@@ -29,7 +29,7 @@ loadSong(songs[songIndex]);
 
 // Update DOM
 function loadSong(song) {
-    title.innerText = song.displayName;
+    track.innerText = song.displayName;
     artist.innerText = song.artist;
     music.src = `music/${song.name}.mp3`;
     image.src = `img/${song.name}.jpg`;
@@ -47,16 +47,14 @@ playBtn.addEventListener('click', () => {
 // Play 
 function playSong() {
     isPlaying = true;
-    playBtn.querySelector('i.fas').classList.remove('fa-play');
-    playBtn.querySelector('i.fas').classList.add('fa-pause');
+    playBtn.innerHTML = `<i class="fas fa-pause main-button" title="Pause"></i>`
     music.play();
 }
 
 // Pause
 function pauseSong() {
     isPlaying = false;
-    playBtn.querySelector('i.fas').classList.remove('fa-pause');
-    playBtn.querySelector('i.fas').classList.add('fa-play');
+    playBtn.innerHTML = `<i class="fas fa-play main-button" title="Play"></i>`
     music.pause();
 }
 
