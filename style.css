@@ -52,6 +52,7 @@ h3 {
   margin: 0.5rem 0 0;
 }
 
+/* Progress */
 .progress-container {
   background: #fff;
   border-radius: 5px;
@@ -76,6 +77,7 @@ h3 {
   justify-content: space-between;
 }
 
+/* Controls */
 .player-controls {
   position: relative;
   top: -1.5rem;
