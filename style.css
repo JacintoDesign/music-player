@@ -1,114 +1,127 @@
-@import url('https://fonts.googleapis.com/css?family=Spartan:400,700&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Spartan:400,700&display=swap");
 
-* { box-sizing: border-box; }
-
-html { font-size: 62.5% }
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
 
 body {
-    min-height: 100vh;
-    margin: 0;
-    background: #c9ced3;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: Spartan, sans-serif;
-    /* background: linear-gradient(to bottom, #236892, #0F0E0A, #89201A);
-    background: linear-gradient(to right, #060501, #C26230, #CBA274);
-    background: linear-gradient(to bottom left, #177E9F, #553D53, #903755);
-    background: linear-gradient(to bottom, #143E4E, #002439, #D8CB96); */
+  min-height: 100vh;
+  margin: 0;
+  background: #c9ced3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Spartan, sans-serif;
 }
 
 .player-container {
-    height: 50rem;
-    width: 40rem;
-    border-radius: 2rem;
-    background-color: #e7e7e7;
-    box-shadow: 0 1.5rem 3rem .5rem rgba(0, 0, 0, .3);
+  height: 50rem;
+  width: 40rem;
+  border-radius: 2rem;
+  background: #e7e7e7;
+  box-shadow: 0 1.5rem 3rem 0.5rem rgba(0, 0, 0, 0.3);
 }
 
 .img-container {
-    width: 30rem;
-    height: 30rem;
-    position: relative;
-    top: -5rem;
-    left: 5rem;
+  width: 30rem;
+  height: 30rem;
+  position: relative;
+  top: -5rem;
+  left: 5rem;
 }
 
 .img-container img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 2rem;
-    box-shadow: 0 .5rem 3rem .5rem rgba(0, 0, 0, .5);
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 2rem;
+  box-shadow: 0 0.5rem 3rem 0.5rem rgba(0, 0, 0, 0.5);
 }
 
 h2 {
-    font-size: 2.5rem;
-    text-align: center;
-    margin: 0;
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 0;
 }
 
 h3 {
-    font-size: 2rem;
-    text-align: center;
-    font-weight: 400;
-    margin: .5rem 0 0;
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 400;
+  margin: 0.5rem 0 0;
 }
 
 .progress-container {
-    background: #fff;
-    border-radius: 5px;
-    cursor: pointer;
-    margin: 4rem 2rem;
-    height: 4px;
-    width: 90%;
+  background: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 4rem 2rem;
+  height: 4px;
+  width: 90%;
 }
-  
+
 .progress {
-    background-color: #242323;
-    border-radius: 5px;
-    height: 100%;
-    width: 0%;
-    transition: width 0.1s linear;
+  background: #242323;
+  border-radius: 5px;
+  height: 100%;
+  width: 0%;
+  transition: width 0.1s linear;
 }
 
 .duration-wrapper {
-    position: relative;
-    top: -2.5rem;
-    display: flex;
-    justify-content: space-between;
+  position: relative;
+  top: -2.5rem;
+  display: flex;
+  justify-content: space-between;
 }
 
 .player-controls {
-    position: relative;
-    top: -1.5rem;
-    left: 12rem;
-    width: 20rem;
+  position: relative;
+  top: -1.5rem;
+  left: 12rem;
+  width: 20rem;
 }
 
 .fas {
-    font-size: 3rem;
-    color: rgb(129, 129, 129);
-    margin-right: 3rem;
-    cursor: pointer;
-    user-select: none;
+  font-size: 3rem;
+  color: rgb(129, 129, 129);
+  margin-right: 3rem;
+  cursor: pointer;
+  user-select: none;
 }
 
 .fas:hover {
-    filter: brightness(80%);
+  filter: brightness(80%);
 }
 
 .main-button {
-    font-size: 4rem;
-    position: relative;
-    top: .3rem;
+  font-size: 4rem;
+  position: relative;
+  top: 0.3rem;
 }
 
 /* Media Query: iPhone (Vertical) */
 @media screen and (max-width: 376px) {
-    .player-container { width: 100%; margin: .5rem; }
-    .img-container { left: 3.25rem; }
-    h2 { font-size: 2rem; }
-    h3 { font-size: 1.5rem; }
-    .player-controls { top: -1rem; left: 10rem; }
+  .player-container {
+    width: 100%;
+    margin: 0.5rem;
+  }
+
+  .img-container {
+    left: 3.25rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  .player-controls {
+    top: -1rem;
+    left: 10rem;
+  }
 }
