@@ -67,13 +67,7 @@ function pauseSong() {
 }
 
 // Play or Pause Event Listener
-playBtn.addEventListener('click', () => {
-  if (isPlaying) {
-    pauseSong();
-  } else {
-    playSong();
-  }
-});
+playBtn.addEventListener('click', () => (isPlaying ? pauseSong() : playSong()));
 
 // Set Progress Bar
 function setProgressBar(e) {
