@@ -2,7 +2,6 @@
 
 html {
   box-sizing: border-box;
-  font-size: 62.5%;
 }
 
 body {
@@ -16,40 +15,40 @@ body {
 }
 
 .player-container {
-  height: 50rem;
-  width: 40rem;
-  border-radius: 2rem;
+  height: 500px;
+  width: 400px;
+  border-radius: 20px;
   background: #e7e7e7;
-  box-shadow: 0 1.5rem 3rem 0.5rem rgba(0, 0, 0, 0.3);
+  box-shadow: 0 15px 30px 5px rgba(0, 0, 0, 0.3);
 }
 
 .img-container {
-  width: 30rem;
-  height: 30rem;
+  width: 300px;
+  height: 300px;
   position: relative;
-  top: -5rem;
-  left: 5rem;
+  top: -50px;
+  left: 50px;
 }
 
 .img-container img {
   height: 100%;
   width: 100%;
   object-fit: cover;
-  border-radius: 2rem;
-  box-shadow: 0 0.5rem 3rem 0.5rem rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  box-shadow: 0 5px 30px 5px rgba(0, 0, 0, 0.5);
 }
 
 h2 {
-  font-size: 2.5rem;
+  font-size: 25px;
   text-align: center;
   margin: 0;
 }
 
 h3 {
-  font-size: 2rem;
+  font-size: 20px;
   text-align: center;
   font-weight: 400;
-  margin: 0.5rem 0 0;
+  margin: 5px 0 0;
 }
 
 /* Progress */
@@ -57,7 +56,7 @@ h3 {
   background: #fff;
   border-radius: 5px;
   cursor: pointer;
-  margin: 4rem 2rem;
+  margin: 40px 20px;
   height: 4px;
   width: 90%;
 }
@@ -72,7 +71,7 @@ h3 {
 
 .duration-wrapper {
   position: relative;
-  top: -2.5rem;
+  top: -25px;
   display: flex;
   justify-content: space-between;
 }
@@ -80,15 +79,15 @@ h3 {
 /* Controls */
 .player-controls {
   position: relative;
-  top: -1.5rem;
-  left: 12rem;
-  width: 20rem;
+  top: -15px;
+  left: 120px;
+  width: 200px;
 }
 
 .fas {
-  font-size: 3rem;
+  font-size: 30px;
   color: rgb(129, 129, 129);
-  margin-right: 3rem;
+  margin-right: 30px;
   cursor: pointer;
   user-select: none;
 }
@@ -98,32 +97,32 @@ h3 {
 }
 
 .main-button {
-  font-size: 4rem;
+  font-size: 40px;
   position: relative;
-  top: 0.3rem;
+  top: 3px;
 }
 
 /* Media Query: iPhone (Vertical) */
 @media screen and (max-width: 376px) {
   .player-container {
     width: 100%;
-    margin: 0.5rem;
+    margin: 5px;
   }
 
   .img-container {
-    left: 3.25rem;
+    left: 32.5px;
   }
 
   h2 {
-    font-size: 2rem;
+    font-size: 20px;
   }
 
   h3 {
-    font-size: 1.5rem;
+    font-size: 15px;
   }
 
   .player-controls {
-    top: -1rem;
-    left: 10rem;
+    top: -10px;
+    left: 100px;
   }
 }
