@@ -13,24 +13,24 @@ const nextBtn = document.getElementById('next');
 // Music
 const songs = [
   {
-    name: 'jacinto-1',
-    displayName: 'Electric Chill Machine',
-    artist: 'Jacinto Design',
+    name: 'caracara-1',
+    displayName: 'Better',
+    artist: 'Caracara',
   },
   {
-    name: 'jacinto-2',
-    displayName: 'Seven Nation Army (Remix)',
-    artist: 'Jacinto Design',
+    name: 'caracara-2',
+    displayName: 'New Chemical Hades',
+    artist: 'Caracara',
   },
   {
-    name: 'jacinto-3',
-    displayName: 'Goodnight, Disco Queen',
-    artist: 'Jacinto Design',
+    name: 'caracara-3',
+    displayName: 'Learn Your Love',
+    artist: 'Caracara',
   },
   {
-    name: 'metric-1',
-    displayName: 'Front Row (Remix)',
-    artist: 'Metric/Jacinto Design',
+    name: 'caracara-4',
+    displayName: 'Dark Bells',
+    artist: 'Caracara',
   },
 ];
 
